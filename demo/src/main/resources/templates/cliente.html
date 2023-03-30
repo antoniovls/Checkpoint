@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html  xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PAGINA DE CLIENTE</title>
+</head>
+<body>
+<!--	<h2> th:text="${id}"> </h2>-->
+<h1>ECOMMERCE</h1>
+<!--    <div>th:text="${descricao}"</div>-->
+<div class="container">
+    <h1 class="mb-3">Mostrar Cliente</h1>
+    <table>
+        <thead>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        </thead>
+        <tbody>
+        <tr th:each="clienteModel : ${clienteModels}">
+            <td th:text="${clienteModel.getName()}"></td>
+            <td th:text="${clienteModel.getEndereco()}"></td>
+            <td th:text="${clienteModel.getTelefone()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
